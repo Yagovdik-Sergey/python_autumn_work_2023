@@ -5,7 +5,7 @@ if first >= last:
     print('Первое число должно быть больше второго')
 else:
     if last - first < 10:
-        lst = random.sample(range(first, last + 1), last - first)
+        lst = random.sample(range(first, last + 1), (last + 1) - first)
         print(lst)
         min_number = lst[0]
         for i in range(len(lst)):
