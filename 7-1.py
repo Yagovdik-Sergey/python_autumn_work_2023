@@ -1,21 +1,11 @@
-def factors(n):
-    k = 2
-    lst = []
-    while k <= n:
-        if n % k == 0:
-            lst.append(k)
-            n /= k
-        else:
-            k += 1
-    return lst
+def LCM(lst):
+    from math import gcd
+    lcm = 1
+    for i in lst:
+        lcm = lcm * i // gcd(lcm, i)
+    return lcm
 
 
-first = factors(int(input()))
-second = factors(int(input()))
-for x in second:
-    if x in first:
-        first.remove(x)
-j = 1
-for i in first + second:
-    j *= i
-print(j)
+print(LCM([10, 15, 30, 64]))
+print(LCM([72, 80, 96]))
+print(LCM([75, 120]))
