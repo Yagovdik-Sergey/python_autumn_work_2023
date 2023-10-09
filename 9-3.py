@@ -7,5 +7,5 @@ for i in lst:
         rez[i] = 1
 rez_sorted = sorted(rez.items(), key=lambda x: (-x[1], x))
 dct = dict(rez_sorted)
-for i in dct:
-    print(f'{i} - {dct[i]}')
+first_10 = {k: dct[k] for k in list(dct)[:10]}
+print(first_10)
