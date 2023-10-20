@@ -13,4 +13,4 @@ def tri_2(n):
     print("\n", end="")
 
 
-tri_2(5)
+tri_2(int(input()))
